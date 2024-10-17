@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println(
                 """
-                Seja bem vindo ao conversor de moedas!
+                Seja bem-vindo ao conversor de moedas!
                 *********************************
                 Moedas:
                 
@@ -18,9 +18,8 @@ public class Main {
                 Boliviano boliviano (BOB)
                 Real brasileiro (BRL)
                 Peso chileno (CLP)
-                Pesos Mexicanos (COP)
+                Pesos mexicanos (COP)
                 Dólar americano (USD)
-                
                 
                 *********************************
                 """
@@ -36,8 +35,8 @@ public class Main {
             input.nextLine();
 
             try {
-                ResponseMoeda ResponseMoeda = ImportarAPI.getMoedaResponse(moeda1);
-                double taxaConversao = ResponseMoeda.getConversion_rates().getRateFor(moeda2);
+                ResponseMoeda responseMoeda = ImportarAPI.getMoedaResponse(moeda1);
+                double taxaConversao = responseMoeda.getConversion_rates().getRateFor(moeda2);
                 double valorConvertido = valorConverter * taxaConversao;
                 System.out.println(
                         "A taxa de conversão de " + moeda1 + " para " + moeda2 + " é: " + taxaConversao +

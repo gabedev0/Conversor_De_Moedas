@@ -7,10 +7,10 @@ import java.net.URI;
 import com.google.gson.Gson;
 
 public class ImportarAPI {
-    public static com.conversorDeMoedas.ResponseMoeda getMoedaResponse(String acronimoMoeda1) throws Exception {
+    public static com.conversorDeMoedas.ResponseMoeda getMoedaResponse(String Moeda1) throws Exception {
 
         String key = "68d5abdef9aad4d2f29aa68b";
-        String url = "https://v6.exchangerate-api.com/v6/" + key + "/latest/" + acronimoMoeda1;
+        String url = "https://v6.exchangerate-api.com/v6/" + key + "/latest/" + Moeda1;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI(url))
